@@ -4,7 +4,9 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+
 /**
+ * @file gpio.h
  * @brief Estructura para instanciar un GPIO
  *
  * gpio_t Puntero a una estructura anonima que representa un GPIO

@@ -8,6 +8,7 @@
 #endif
 
 /**
+ * @file gpio.c
  * @brief Atributos de cada objeto GPIO
  *
  */
