@@ -43,7 +43,7 @@ extern "C" {
 /* === Public function declarations ============================================================ */
 
 /**
- * @brief Función principal del sistema, se ejecuta al iniciar el programa
+ * @brief Función principal del  sistema, se ejecuta al iniciar el programa
  *
  * @return int Valor de retorno, cero si esta todo bien, negativo si hay un error
  */

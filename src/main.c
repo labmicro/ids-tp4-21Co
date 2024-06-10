@@ -26,9 +26,11 @@ SPDX-License-Identifier: MIT
 /* === Headers files inclusions =============================================================== */
 
 #include "main.h"
+#include "gpio.h"
 
 /* === Macros definitions ====================================================================== */
-
+#define LED_ROJO_PUERTO 1
+#define LED_ROJO_BIT 7
 /* === Private data type declarations ========================================================== */
 
 /* === Private variable declarations =========================================================== */
@@ -44,6 +46,11 @@ SPDX-License-Identifier: MIT
 /* === Public function implementation ========================================================== */
 
 int main(void) {
+
+    gpio_t led_rojo = gpioCreate(LED_ROJO_PUERTO, LED_ROJO_BIT);
+    gpioSetOutput(led_rojo, true);
+    gpioSetState(led_rojo, true);
+
     return 0;
 }
 
