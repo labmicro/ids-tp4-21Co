@@ -21,14 +21,31 @@ SPDX-License-Identifier: MIT
 
 /** @file main.c
  ** @brief Definición de la función principal del programa
+ *
+ * La funcion main:
+ *
+ * 1. Crea un objeto LED Rojo usando el puerto 1, pin 7
+ * 2. Configura el led rojo como salida
+ * 3. Define el estado de la salida en alto
+ *
  **/
 
 /* === Headers files inclusions =============================================================== */
 
 #include "main.h"
+#include "gpio.h"
 
 /* === Macros definitions ====================================================================== */
-
+/**
+ * @brief Puerto asignado al LED Rojo
+ *
+ */
+#define LED_ROJO_PUERTO 1
+/**
+ * @brief Pin asignado al LED Rojo
+ *
+ */
+#define LED_ROJO_BIT 7
 /* === Private data type declarations ========================================================== */
 
 /* === Private variable declarations =========================================================== */
@@ -44,6 +61,11 @@ SPDX-License-Identifier: MIT
 /* === Public function implementation ========================================================== */
 
 int main(void) {
+
+    gpio_t led_rojo = gpioCreate(LED_ROJO_PUERTO, LED_ROJO_BIT);
+    gpioSetOutput(led_rojo, true);
+    gpioSetState(led_rojo, true);
+
     return 0;
 }
 

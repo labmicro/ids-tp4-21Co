@@ -16,8 +16,12 @@ all: $(OBJ_FILES)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@echo Compilando $@
-	@mkdir -p $(OBJ_DIR)
+	@mkdir -p $(OBJ_DIR)git
 	@gcc -o $@ -c $< -I $(INC_DIR) -MMD
 
 clean:
 	@rm -r $(OUT_DIR)
+
+doc:
+	@mkdir -p $(OUT_DIR)
+	@doxygen doxyfile
