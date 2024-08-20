@@ -7,6 +7,9 @@
 #define GPIO_MAX_INSTANCES 10
 #endif
 
+/**
+ * @brief Estructura privada para el objeto gpio.
+ */
 struct gpio_s {
     uint8_t port;
     uint8_t bit;
@@ -15,9 +18,9 @@ struct gpio_s {
 };
 
 /**
- * @brief
+ * @brief Funcion para crear una nueva instancia de un objeto GPIO
  *
- * @return gpio_t
+ * @return gpio_t Retorna un puntero a la instancia del GPIO.
  */
 static gpio_t allocateInstance() {
     static struct gpio_s instances[GPIO_MAX_INSTANCES] = {0};
